@@ -5,14 +5,44 @@
     <title>Promises</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
+    <nav>
+        <div class="container-fluid">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo logo">Pokemon Info</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row center">
+        <div class="col s3"><span class="card-content title-table">Nombre</span></div>
+        <div class="col s3"><span class="card-content title-table">Habilidad.</span></div>
+        <div class="col s3"><span class="card-content title-table">Habilidades.</span></div>
+        <div class="col s3"><span class="card-content title-table">Extra.</span></div>
+    </div>
+    <div id="nombre-pokemones">
+        <!-- Aqui van los nombres de los pokemones -->
+    </div>
+    <div id="primera-habilidad">
+        <!--  Aqui va la primera habilidad -->
+    </div>
+    <div id="total-habilidades">
+        <!-- Aqui van todas las habilidades -->
+    </div>
+
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
     <!-- JS -->
     <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
