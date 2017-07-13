@@ -29,7 +29,7 @@ $.ajax({
             console.log(data);
             // llamada a la nueva api
             $.ajax({
-                    url: data.url.replace('http', 'https'),
+                    url: data.url,
                     type: 'GET',
                     datatype: 'JSON',
                     data: { 'limit': '1' },
