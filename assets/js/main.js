@@ -3,7 +3,7 @@ function firstMayus(str) {
 }
 
 $.ajax({
-        url: 'http://pokeapi.co/api/v2/pokemon',
+        url: 'https://pokeapi.co/api/v2/pokemon',
         type: 'GET',
         datatype: 'JSON',
         data: { 'limit': '12' },
@@ -29,7 +29,7 @@ $.ajax({
             console.log(data);
             // llamada a la nueva api
             $.ajax({
-                    url: data.url,
+                    url: data.url.replace('http', 'https'),
                     type: 'GET',
                     datatype: 'JSON',
                     data: { 'limit': '1' },
