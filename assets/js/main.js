@@ -29,29 +29,31 @@ $.ajax({
             console.log(data);
             // llamada a la nueva api
             $.ajax({
-                    url: data.url,
-                    type: 'GET',
-                    datatype: 'JSON',
-                    data: { 'limit': '1' },
-                })
-                .done(function(respuesta) {
-                    console.log('respuesta', respuesta.types)
-                        // primera habilidad
-                    $(`#first-ability-${indice}`).append(respuesta.abilities[0].ability.name);
-                    // todas las habilidades
-                    respuesta.abilities.forEach(function(ability) {
-                        console.log('ability', ability.ability.name);
-                        $(`#total-abilities-${indice}`).append(`<span>${ability.ability.name}<span><br>`);
-                    });
+                url: data.url,
+                type: 'GET',
+                datatype: 'JSON',
+                data: { 'limit': '1' },
+            })
 
-                    respuesta.types.forEach(function(type) {
-                        console.log('type', type);
-                        $(`#types-${indice}`).append(`<span>${type.type.name}<span><br>`);
-                    })
+            .done(function(respuesta) {
+                console.log('data url', data.url);
+                console.log('respuesta', respuesta.types)
+                    // primera habilidad
+                $(`#first-ability-${indice}`).append(respuesta.abilities[0].ability.name);
+                // todas las habilidades
+                respuesta.abilities.forEach(function(ability) {
+                    console.log('ability', ability.ability.name);
+                    $(`#total-abilities-${indice}`).append(`<span>${ability.ability.name}<span><br>`);
+                });
 
-                }).fail(function() {
-                    console.log('error en la segunda llamada de la api')
+                respuesta.types.forEach(function(type) {
+                    console.log('type', type);
+                    $(`#types-${indice}`).append(`<span>${type.type.name}<span><br>`);
                 })
+
+            }).fail(function() {
+                console.log('error en la segunda llamada de la api')
+            })
         });
 
         //     .done(function(data) {
